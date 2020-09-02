@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background: url("https://media2.giphy.com/media/35B3Val0pYgtpScqsz/giphy.gif?cid=ecf05e47y8lnx795r1sw26glwnxvlfelahb88g4pb3gmzktc&rid=giphy.gif") no-repeat fixed center;
+    background-size: 100%;
+  }
+
+  .gameboard {
+    height: 100vh;
+    width: 100vh;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    max-height: 60vh;
+    max-width: 60vh;
+  }
+
+  .color {
+    width: 50%;
+    height: 50%;
+    display: inline-block;
+  }
+
+  .left {
+    float: left;
+  }
+
+  .right {
+    float: right;
+  }
+
+  .naranja {
+    background: #f1721e;
+  }
+
+  .naranja.light {
+    background: #df9a7e;
+  }
+
+  .guinda {
+    background: #db1d4c;
+  }
+
+  .guinda.light {
+    background: #db4181;
+  }
+
+  .amarillo {
+    background: #e0cc17;
+  }
+
+  .amarillo.light {
+    background: #e4da4f;
+  }
+
+  .verde {
+    background: #48bd16;
+  }
+
+  .verde.light {
+    background: #8bda4b;
+  }
+
+  .btn-start {
+    width: 400px;
+    height: 100px;
+    background: #ecf0f1;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 200px);
+  }
+
+  .hide {
+    display: none;
+  }
