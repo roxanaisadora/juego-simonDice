@@ -6,7 +6,6 @@ const naranja = document.getElementById('naranja')
 const btnEmpezar = document.getElementById('btnEmpezar')
 const ultimo_nivel = 10
 
-
 class Juego {
     constructor() {
         this.inicializar = this.inicializar.bind(this)
@@ -126,6 +125,5 @@ class Juego {
 }
 
 function empezarJuego() {
-    //para visualizar el array se usa window.juego
     window.juego = new Juego()
 }

@@ -68,16 +68,32 @@ body {
   .verde.light {
     background: #8bda4b;
   }
-
+  button {
+    color:#FFF;
+  }
   .btn-start {
     width: 400px;
     height: 100px;
-    background: #ecf0f1;
-    color: #2c3e50;
+    background-image: linear-gradient(90deg, #1f1f22 0%, #583b56 17%, #5b4466 39%, #412020 60%, #100f0f 80%, #0e0909 100%);
     font-size: 2.5rem;
     position: absolute;
     top: calc(50% - 50px);
     left: calc(50% - 200px);
+    border-radius: 20px;
+    border: 2px solid white;
+  }
+
+  .btn-start:hover {
+    animation:slidebg 1s infinite alternate;
+  }
+  
+  @keyframes slidebg {
+    from {
+      background-position:0vw;
+    }
+    to {
+      background-position:39vw;
+    }
   }
 
   .hide {
