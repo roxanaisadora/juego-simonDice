@@ -9,21 +9,58 @@ body {
     display: flex;
     align-items: center;
     height: 100vh;
-    background: url("https://media2.giphy.com/media/35B3Val0pYgtpScqsz/giphy.gif?cid=ecf05e47y8lnx795r1sw26glwnxvlfelahb88g4pb3gmzktc&rid=giphy.gif") no-repeat fixed center;
+    background: url("https://interactivadigital.com/uploads/2018/02/medios-115149.gif") no-repeat fixed center;
     background-size: 100%;
+  }
+  .container {
+    display: flex;
+    margin: 10em 0em 10em 5em
+  }
+  
+  .container-dashboard {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+  }
+
+  .dashboard {
+    font-family: 'Grandstander', cursive;
+    background-color: rgba(66, 138, 233, 0.3);
+    font-size: 2vw;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 2vw 3vw;
+  }
+  
+  .dashboard li {
+    color: white !important;
+    list-style: none;
+  }
+
+  .container-gameboard {
+    margin: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 43em;
+    outline: 1px solid cyan;
   }
 
   .gameboard {
+    transform: rotate(45deg);
     height: 100vh;
     width: 100vh;
-    border-radius: 50%;
+    border-radius: 20%;
     overflow: hidden;
     margin: 0 auto;
-    max-height: 60vh;
-    max-width: 60vh;
+    max-height: 50vh;
+    max-width: 50vh;
+    position: absolute;
   }
 
   .color {
+    border: 3px solid white;
     width: 50%;
     height: 50%;
     display: inline-block;
@@ -38,64 +75,84 @@ body {
   }
 
   .naranja {
-    background: #f1721e;
+    background: #da5a05;
   }
 
   .naranja.light {
-    background: #df9a7e;
+    background: #f78d03;
   }
 
   .guinda {
-    background: #db1d4c;
+    background: #68152a;
   }
 
   .guinda.light {
-    background: #db4181;
+    background: #a33d68;
   }
 
   .amarillo {
-    background: #e0cc17;
+    background: #aa9a05;
   }
 
   .amarillo.light {
-    background: #e4da4f;
+    background: #faea05;
   }
 
   .verde {
-    background: #48bd16;
+    background: #246e04;
   }
 
   .verde.light {
-    background: #8bda4b;
+    background: #6dee03;
   }
-  button {
-    color:#FFF;
+
+  .container-instructions {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 70em;
+    position: absolute;
   }
+
+  .instructions {
+    font-family: 'Grandstander', cursive;
+    background-color: rgba(238, 132, 34, 0.5);
+    font-size: 24px;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 2vw;
+    position: absolute;
+    color: white;
+  }
+
+  .container-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    position: absolute;
+  }
+
   .btn-start {
     width: 400px;
     height: 100px;
     background-image: linear-gradient(90deg, #1f1f22 0%, #583b56 17%, #5b4466 39%, #412020 60%, #100f0f 80%, #0e0909 100%);
     font-size: 2.5rem;
-    position: absolute;
-    top: calc(50% - 50px);
-    left: calc(50% - 200px);
     border-radius: 20px;
     border: 2px solid white;
+    color:#FFF;
   }
-
-  .btn-start:hover {
-    animation:slidebg 1s infinite alternate;
-  }
-  
-  @keyframes slidebg {
-    from {
-      background-position:0vw;
-    }
-    to {
-      background-position:39vw;
-    }
-  }
-
   .hide {
     display: none;
+  }
+
+  @media only screen and (max-width: 600px) {
+    body {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      height: 50vh;
+      background: url("https://interactivadigital.com/uploads/2018/02/medios-115149.gif") repeat fixed center;
+      background-size: 100%;
+    }
   }

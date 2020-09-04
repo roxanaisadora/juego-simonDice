@@ -3,8 +3,12 @@ const celeste = document.getElementById('amarillo')
 const violeta = document.getElementById('guinda')
 const verde = document.getElementById('verde')
 const naranja = document.getElementById('naranja')
+const nombre = document.getElementById("name");
+const nivel = document.getElementById("level");
+const tiempo = document.getElementById("time");
 const btnEmpezar = document.getElementById('btnEmpezar')
-const ultimo_nivel = 10
+const instructions = document.getElementById('instructions')
+const ultimo_nivel = 2
 
 class Juego {
     constructor() {
@@ -18,6 +22,7 @@ class Juego {
         this.siguienteNivel = this.siguienteNivel.bind(this)
         this.toggleBtnEmpezar()
         this.nivel = 1
+        this.datos();
         this.colores = {
             amarillo,
             guinda,
@@ -25,11 +30,43 @@ class Juego {
             verde
         }
     }
+    datos() {
+        Swal.fire({
+            title: '¡Simon Dice!', 
+            text: 'Ingresa Tu Nombre:',
+            input: 'text', 
+          })
+        .then((result) => {
+        if (result.value) {
+            nombre.innerHTML = JSON.stringify(result.value);
+        } else {
+            nombre.innerHTML = "Anónimo";
+        }
+        nivel.innerHTML = this.nivel = 1;
+        tiempo.innerHTML = this.counter = 15;
+        this.generarSecuencia();
+        setTimeout(this.siguienteNivel, 500);
+        this.temporizador();
+        });
+      }
+    temporizador() {
+        this.timer = setInterval(() => {
+          this.counter--;
+          if (this.counter < 0) {
+            clearInterval(this.timer);
+            this.perdioElJuego();
+          } else {
+            tiempo.innerText = this.counter;
+          }
+        }, 1000);
+    }
     toggleBtnEmpezar(){
         if (btnEmpezar.classList.contains('hide')){
             btnEmpezar.classList.remove('hide')
+            instructions.classList.remove('hide')
         }else {
             btnEmpezar.classList.add('hide')
+            instructions.classList.add('hide')
         }
     }
     generarSecuencia(){
@@ -102,25 +139,57 @@ class Juego {
                 this.eliminarEventosClick()
                 if(this.nivel === (ultimo_nivel+1))
                 {
+                    clearInterval(this.timer);
                     this.ganoElJuego()
                 }else {
-                    setTimeout(this.siguienteNivel, 2000)
+                    clearInterval(this.timer);
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: `Muy bien!, nivel: ${this.nivel}!`,
+                        showConfirmButton: false,
+                        timer: 1000
+                      })
+                    .then(() => {
+                        nivel.innerHTML = this.nivel
+                        tiempo.innerHTML = this.counter = 15;
+                        this.temporizador();
+                        setTimeout(this.siguienteNivel(), 1500);
+                      })
                 }
             }
         }else {
+            clearInterval(this.timer);
             this.perdioElJuego()
         }
     }
     ganoElJuego(){
-        swal('Felicitaciones','ganaste el juego','success')
-            .then(this.inicializar)
+        Swal.fire({
+            icon: 'success',
+            title: 'Felicitaciones',
+            text: 'Ganaste el juego!'
+          })
+        .then(() => {
+            this.eliminarEventosClick();
+            nombre.innerHTML = "Anónimo";
+            nivel.innerHTML = "--";
+            tiempo.innerHTML = "--";
+            this.toggleBtnEmpezar();
+          });
     }
     perdioElJuego(){
-        swal('Lo sentimos','Sigue intentando','error')
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Lo sentimos, sigue intentando!'
+          })
         .then(() => {
-            this.eliminarEventosClick()
-            this.inicializar()
-        })
+            this.eliminarEventosClick();
+            nombre.innerHTML = "Anónimo";
+            nivel.innerHTML = "--";
+            tiempo.innerHTML = "--";
+            this.toggleBtnEmpezar();
+        });
     }
 }
 

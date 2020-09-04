@@ -4,16 +4,48 @@
     <meta charset="utf-8">
     <title>Simon Dice</title>
     <link rel="stylesheet" href="juego_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@300&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="gameboard">
-      <div id="amarillo" class="color amarillo left" data-color="amarillo"></div>
-      <div id="guinda" class="color guinda right" data-color="guinda"></div>
-      <div id="verde" class="color verde right" data-color="verde"></div>
-      <div id="naranja" class="color naranja left" data-color="naranja"></div>
-      <button id="btnEmpezar" class="btn-start" onclick="empezarJuego()">Empezar a jugar!</button>
+    <section class="container">
+      <section class="container-dashboard">
+        <div class="dashboard">
+          <ul>
+            <li><b>Jugador:</b>
+              <span id="name">Anónimo</span>
+            </li>
+            <li><b>Nivel:</b>
+              <span id="level">--</span>
+            </li>
+            <li><b>Tiempo:</b>
+              <span id="time">--</span><span> s</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="container-gameboard">
+        <div class="gameboard">
+          <div id="amarillo" class="color amarillo left" data-color="amarillo"></div>
+          <div id="guinda" class="color guinda right" data-color="guinda"></div>
+          <div id="verde" class="color verde right" data-color="verde"></div>
+          <div id="naranja" class="color naranja left" data-color="naranja"></div>
+        </div>
+        <div class="container-button">
+          <button id="btnEmpezar" class="btn-start" onclick="empezarJuego()">Empezar a jugar!</button>
+        </div>
+      </section>
+    </section>
+    <section id="instructions" class="container-instructions">
+      <div class="instructions">
+        <h1> Instrucciones </h1>
+        <ul>
+          <br><li>El juego consta de seguir la secuencia de colores.</li>
+          <li>Cada nivel se ira aumentando la cantidad de colores.</li>
+          <li>Se gana cuando se completa los 10 niveles satisfactoriamente</li>
+        </ul>
     </div>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="juego.js"></script>
   </body>
 </html>
