@@ -2,11 +2,15 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Simon Dice</title>
-    <link rel="stylesheet" href="juego_style.css">
+    <link rel="stylesheet" href="./css/juego_style.css">
     <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@300&display=swap" rel="stylesheet">
   </head>
   <body>
+    <header class="header">
+      <div class="title">¡Simon Dice!</div>
+    </header>
     <section class="container">
       <section class="container-dashboard">
         <div class="dashboard">
@@ -34,18 +38,18 @@
           <button id="btnEmpezar" class="btn-start" onclick="empezarJuego()">Empezar a jugar!</button>
         </div>
       </section>
-    </section>
-    <section id="instructions" class="container-instructions">
-      <div class="instructions">
-        <h1> Instrucciones </h1>
-        <ul>
-          <br><li>El juego consta de seguir la secuencia de colores.</li>
-          <li>Cada nivel se ira aumentando la cantidad de colores.</li>
-          <li>Se gana cuando se completa los 10 niveles satisfactoriamente</li>
-        </ul>
-    </div>
+      <section id="instructions" class="container-instructions">
+        <div class="instructions">
+          <h1> Instrucciones </h1>
+          <ul>
+            <br><li>El juego consta de seguir la secuencia de colores.</li>
+            <li>Cada nivel se ira aumentando la cantidad de colores.</li>
+            <li>Se gana cuando se completa los 10 niveles satisfactoriamente</li>
+          </ul>
+        </div>
+      </section>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-    <script src="juego.js"></script>
+    <script src="./js/juego.js"></script>
   </body>
 </html>

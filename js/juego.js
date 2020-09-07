@@ -8,7 +8,7 @@ const nivel = document.getElementById("level");
 const tiempo = document.getElementById("time");
 const btnEmpezar = document.getElementById('btnEmpezar')
 const instructions = document.getElementById('instructions')
-const ultimo_nivel = 2
+const ultimo_nivel = 10
 
 class Juego {
     constructor() {

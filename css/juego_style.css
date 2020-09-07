@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Caveat Brush', cursive;
+    margin: 0;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background: url("https://photoshop-kopona.com/uploads/posts/2017-11/1509807126_1.jpg") no-repeat fixed center;
+    background-size: 100%;
+}
+
+.header {
+    margin: 15px auto 25px;
+}
+
+.title {
+    font-size: 4vw;
+    margin: 1px;
+    background: url("https://pa1.narvii.com/6469/b406bb151dc409b42f66eae8f57a79cdcae6d95e_00.gif") repeat-x;
+    background-color: white;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container-dashboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard {
+    font-family: 'Grandstander', cursive;
+    background-color: rgba(66, 138, 233, 0.3);
+    font-size: 2vw;
+    margin-bottom: 30px;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 2vw 1vw;
+    position: relative;
+}
+
+.dashboard li {
+    color: white !important;
+    list-style: none;
+}
+
+.container-gameboard {
+    margin-left: 5em; 
+    margin-right: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameboard {
+    height: 100vh;
+    width: 100vh;
+    border-radius: 20%;
+    overflow: hidden;
+    margin: 0 auto;
+    max-height: 45vh;
+    max-width: 45vh;
+}
+
+.color {
+    border: 3px solid white;
+    width: 50%;
+    height: 50%;
+    display: inline-block;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: left;
+}
+
+.amarillo {
+    background: #aa9a05;
+}
+
+.amarillo.light {
+    background: #faea05;
+}
+
+.guinda {
+    background: #68152a;
+}
+
+.guinda.light {
+    background: #a33d68;
+}
+
+.naranja {
+    background: #da5a05;
+}
+
+.naranja.light {
+    background: #f78d03;
+}
+
+.verde {
+    background: #246e04;
+}
+
+.verde.light {
+    background: #6dee03;
+}
+
+.container-instructions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3em; 
+    margin-right: 3em;
+    margin-top: 3em;
+}
+
+.instructions {
+    font-family: 'Grandstander', cursive;
+    background-color: rgba(48, 6, 48, 0.3);
+    font-size: 1.5vw;
+    margin-bottom: 30px;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 2vw 3vw;
+    position: relative;
+    color: white
+}
+
+.container-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+  }
+
+.btn-start {
+    font-family: 'Grandstander', cursive;
+    width: 400px;
+    height: 100px;
+    background: #ecf0f1;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    position: absolute;
+    border-radius: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        background-size: 180%;
+    }
+
+    .dashboard {
+        font-size: 2em;
+        margin-top:2em;
+    }
+
+    .title {
+        font-size: 4em;
+        background-color: rgb(127, 222, 235);
+    }
+
+    .btn-start {
+        width: 620px;
+        height: 180px;
+        font-size: 3rem;
+    }
+
+    .container-instructions {
+        margin-top: 3em;
+    }
+
+    .instructions {
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    body {
+        background-size: 150%;
+    }
+
+    .title {
+        font-size: 2em;
+        background-color: rgb(224, 17, 214);
+    }
+
+    .dashboard {
+        font-size: 1em;
+    }
+
+    .btn-start {
+        width: 180px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .container-instructions {
+        margin-top: 1em;
+    }
+
+}
+
+@media screen and (max-width: 416px) {
+    body {
+        background-size: 300%;
+    }
+
+    .title {
+        font-size: 3em;
+        background-color: rgb(34, 224, 17);
+    }
+
+    .dashboard {
+        font-size: 1em;
+        padding: 5px 150px 5px 5px;
+    }
+
+    .gameboard {
+        max-height: 35vh;
+        max-width: 35vh;
+    }
+
+    .btn-start {
+        width: 260px;
+        height: 100px;
+    }
+
+    .instructions {
+        font-size: 3.5vw;
+    }
+}
+
+@media screen and (max-width: 320px)  {
+  .title {
+    font-size: 1em;
+    background-color: rgb(224, 17, 214);
+  }
+
+  .container {
+    margin: 0 85px;
+  }
+
+  .dashboard {
+    font-size: .5em;
+    padding: 5px 100px 5px 1px;
+  }
+}
