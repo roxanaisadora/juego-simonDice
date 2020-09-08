@@ -20,3 +20,6 @@ https://roxanaisadora.github.io/juego-simonDice/.
 * JavaScript
 * HTML
 * CSS
+
+# bootstrap 
+* SweetAlert2
